@@ -1,0 +1,41 @@
+[
+    {
+        "name" : "fname",
+        "conditions" : [ 
+            {
+                "condition" : "obj.fname == undefined || obj.fname == '' ",
+                "error" : "First Name is required"
+            },
+            {
+                "condition" : "obj.fname && !letters.test(obj.fname) ",
+                "error" : "First Name is contained only alphabet"
+            }    
+        ] 
+    },
+    {
+        "name" : "lname",
+        "conditions" : [
+            {
+                "condition" : "obj.lname == undefined || obj.lname == '' ",
+                "error" : "Last Name is required"
+            },
+            {
+                "condition" : "obj.lname && !letters.test(obj.lname) ",
+                "error" : "Last Name is contained only alphabet"
+            }   
+        ]  
+    },
+    {
+        "name" : "email",
+        "conditions" : [
+            {
+                "condition" : "obj.email == undefined || obj.email == ''",
+                "error" : "Email is required"
+            }, 
+            {
+                "condition" : "!(obj.email.includes('@gmail') || obj.email.includes('@outlook')) ",
+                "error" : "Email is not valid"
+            }
+        ]
+    }
+]
